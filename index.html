@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Peddy</title>
+    <!-- adding a favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <!-- adding google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- adding fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/105c77726f.js" crossorigin="anonymous"></script>
+    <!-- Adding Tailwind CSS and daisy-Ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Configuration of TailwindCSS  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(14 122 129)',
+                        secondary: "#1c1312 ",
+                        dark: '#0d0e0f',
+                        light: '#212121',
+                        red: '#FF0000',
+                    },
+                    fontFamily: {
+                        "lato": ["Lato", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .current {
+            background-color: #40e3e3;
+            color: #0d0e0f;
+        }
+    </style>
+</head>
+
+<body class="font-lato">
+    <!-- header section start -->
+    <header>
+        <nav class="md:w-11/12 md:mx-auto px-2 md:px-10 md:py-3 py-3 flex items-center justify-between">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div class="md:flex items-center gap-2 hidden">
+                            <img class="w-full" src="./images/logo.webp" alt="logo" />
+                            <h2 class="text-xl md:text-2xl font-bold">Peddy</h2>
+                        </div>
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle md:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow md:hidden">
+                            <li><a>Home</a></li>
+                            <li><a>Shop</a></li>
+                            <li><a>Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-center">
+                    <div class="flex items-center gap-2 md:hidden">
+                        <img class="w-8" src="./images/logo.webp" alt="logo" />
+                        <h2 class="text-xl md:text-2xl font-bold">Peddy</h2>
+                    </div>
+                    <ul class="md:flex items-center gap-2 md:gap-6 font-bold text-dark hidden">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <span class="btn btn-ghost btn-circle">
+                        <i
+                            class="fa-regular fa-user border border-primary/30 p-2 md:p-3 rounded-full hover:bg-primary hover:text-white hover:border-none"></i>
+                    </span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- header section end -->
+
+
+    <!-- main section start -->
+    <main class="w-11/12 mx-auto">
+        <!-- hero section start -->
+        <section class="w-11/12 mt-25 mx-auto flex flex-col items-center justify-center  bg-white">
+            <div class="text-center space-y-6 w-full">
+                <h1 class="text-secondary text-xl font-medium">
+                    Bringing Families Together ❤️
+                </h1>
+                <h2 class="text-4xl  lg:text-6xl font-bold mt-2 max-w-[740px] mx-auto">
+                    Your Path to Adoption Starts Here
+                </h2>
+                <p class="text-gray-500 mt-4 max-w-4xl mx-auto">
+                    Pets are more than just animals; they are loyal companions who fill our lives with happiness,
+                    comfort, and love. From the playful antics of a cat to the unwavering loyalty of a dog, pets
+                    brighten our days with their warmth and unique personalities
+                </p>
+                <button onclick="scrollToBestDealSection()"
+                    class="mt-6 px-6 py-3 bg-primary text-white text-lg rounded-lg hover:bg-emerald-600">
+                    View More
+                </button>
+            </div>
+
+            <div class="mt-10 w-full">
+                <img class="mx-auto lg:w-[802px]" src="images/pet.webp" alt="Dog and Cat"
+                    class="w-full max-w-lg mx-auto" />
+            </div>
+        </section>
+        <!-- hero section end -->
+
+        <!--Adopt Best friend start -->
+        <section id="adopt">
+            <div class="text-center space-y-6 w-full mb-12">
+                <h2 class=" text-4xl lg:text-6xl font-bold mt-2 max-w-[740px] mx-auto">
+                    Adopt Your Best Friend
+                </h2>
+                <p class="text-light text-2xl mt-5 max-w-4xl mx-auto">
+                    Adopting a pet not only brings joy into your life but also provides a loving home to an animal in
+                    need. It's a rewarding experience that offers companionship while making a meaningful difference in
+                    the life of a pet..
+                </p>
+            </div>
+
+            <!-- Category fetch section -->
+            <div id="category" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-2"></div>
+        </section>
+        <!-- Adopt Best friend End -->
+
+        <!-- best deal section start -->
+        <section class="mt-12 mb-12">
+            <div class="flex flex-col lg:flex-row justify-between items-center">
+                <h2 class="text-2xl font-bold">Best Deal For you</h2>
+                <button id="sortPriceBtn"
+                    class="mt-6 px-6 py-2 bg-primary text-white text-lg rounded-lg hover:bg-emerald-600">
+                    Sort by Price
+                </button>
+            </div>
+
+            <!-- show items -->
+            <div class="flex flex-col lg:flex-row  gap-5 mt-12">
+                <!-- show images  -->
+                <div id="bestDeal"
+                    class="lg:w-9/12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-2 py-4 border">
+
+                </div>
+                <!-- add images to carts -->
+                <div class="lg:w-3/12">
+                    <h1 class="text-2xl text-center font-bold">Add to Cart</h1>
+                    <div id="bestDealCart" class="border min-h-64 grid grid-cols-2 gap-2 px-3 py-4"></div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+
+            <dialog id="my_modal_4" class="modal">
+                <div class="modal-box w-11/12 border border-red-500 max-w-xl">
+                    <div class="bg-white shadow-lg rounded-lg">
+                        <!-- Image Section -->
+                        <img id="modal-image" class="rounded-t-lg w-full" src="" alt="Pet image" />
+
+                        <!-- Content Section -->
+                        <div class="p-6">
+                            <h2 id="modal-pet-name" class="text-2xl font-bold mb-4">
+                                Alessia Max
+                            </h2>
+
+                            <!-- Info Section -->
+                            <div class="flex flex-wrap text-gray-700 text-sm mb-4">
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-paw mr-2"></i>
+                                    <span id="modal-breed">Breed: Golden Retriever</span>
+                                </div>
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-calendar-alt mr-2"></i>
+                                    <span id="modal-birth">Birth: 2024</span>
+                                </div>
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-venus mr-2"></i>
+                                    <span id="modal-gender">Gender: Female</span>
+                                </div>
+                                <div class="w-1/2 flex items-center mb-2">
+                                    <i class="fas fa-dollar-sign mr-2"></i>
+                                    <span id="modal-price">Price: $199</span>
+                                </div>
+                            </div>
+
+                            <!-- Details Section -->
+                            <div class="text-gray-600 text-sm border-t pt-2">
+                                <h3 class="font-bold mb-2">Details Information</h3>
+                                <p>
+                                    It is a long established fact that a reader will be
+                                    distracted by the readable content of a page when looking at
+                                    its layout.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Cancel Button -->
+                        <div class="modal-action">
+                            <button class="w-full bg-teal-200 hover:bg-teal-100 text-green-600 py-2 font-bold rounded"
+                                onclick="closeModal()">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
+
+            <dialog id="my_modal_2" class="modal">
+                <div id="modal" class="modal-box w-11/12 border border-red-500 max-w-xl">
+                    <div class="bg-white p-6 rounded-lg text-center">
+                        <img src="https://image.shutterstock.com/image-vector/handshake-icon-deal-symbol-line-260nw-749516455.jpg"
+                            alt="Congrats Icon" class="mx-auto w-12 h-12 mb-4">
+                        <h2 class="text-3xl text-black font-bold">Congrates</h2>
+                        <p class="text-gray-600">Adoption Process is Start For your Pet</p>
+                        <p id="countdown" class="text-3xl font-bold mt-2">3</p>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+
+        <!-- best deal section end -->
+
+    </main>
+    <!-- main section End -->
+
+    <!-- footer section Start -->
+    <footer class="w-full lg:px-20 bg-[#131313] mt-8 p-6 md:p-14">
+        <div class="w-11/12 mx-auto">
+            <div class="flex justify-between flex-wrap gap-5">
+                <div class="flex flex-col gap-2 text-gray-500 font-semibold">
+                    <div class="flex items-center gap-2">
+                        <img class="w-8" src="./images/logo.webp" alt="logo" />
+                        <h2 class="text-xl md:text-3xl font-bold text-gray-300">Peddy</h2>
+                    </div>
+                    <p>Location: Narail, Dhaka Bangladesh</p>
+                    <p>Phone: +88 01957449975</p>
+                    <p>Email: parveskalia@gmail.com</p>
+                    <p>Openings hours: 9.00 AM - 5.00 PM</p>
+                    <div class="flex items-center space-x-2">
+                        <a href=" https://www.facebook.com/nmhkparvez/"><img class="w-10"
+                                src="https://img.icons8.com/?size=48&id=uLWV5A9vXIPu&format=png" alt=""> </a>
+                        <img class="w-10" src="https://img.icons8.com/?size=48&id=cMRBi0rI3iwb&format=png" alt="">
+                        <img class="w-10" src="https://img.icons8.com/?size=48&id=19318&format=png" alt="">
+                        <img class="w-10" src="https://img.icons8.com/?size=48&id=32323&format=png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-400">Useful Links</h2>
+                    <ul class="flex flex-col mt-5 gap-2 text-gray-500 font-semibold">
+                        <li class="hover:translate-x-1 hover:translate-y-1 transition-all">
+                            Home
+                        </li>
+                        <li class="hover:translate-x-1 hover:translate-y-1 transition-all">
+                            About Us
+                        </li>
+                        <li class="hover:translate-x-1 hover:translate-y-1 transition-all">
+                            Animals
+                        </li>
+                        <li class="hover:translate-x-1 hover:translate-y-1 transition-all">
+                            Foundation
+                        </li>
+                        <li class="hover:translate-x-1 hover:translate-y-1 transition-all">
+                            Contact
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-300">Feel free to Drop a Message</h2>
+                    <input type="text" placeholder="Enter Your Email..."
+                        class="w-full bg-gray-500 outline-none text-white rounded-lg px-2 py-2 mt-5" />
+                    <button
+                        class="bg-red w-full text-white px-4 py-2 rounded-xl font-bold hover:bg-slate-500 hover:text-white mt-4">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section End -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
